@@ -1,4 +1,11 @@
 # Japanese Sweet Potato
+## Ingedients
+- 3 Japanese Sweet Potatoes
+- 1 Tablespoon Olive Oil
+- 2 Teaspoons: Optional Seasonings (Salt, Chili Oil, or Chili FLakes)
+*notes-the sweet potato comes out very sweet and buttery if you cook it right so you really do not need to season it 
+
+### Directions 
 
 1. Pre-heat your oven to 325˚
 2. While your oven is preheating wash your sweet potatoes throughly
@@ -8,3 +15,5 @@
 6. Dizzle some olive oil across the potatoes and pop them in the oven
 7. Place the potatoes in the oven for 2 hours to get a sweet, rich, and soft texture. 
 8. Let the potatoes cool fo 15 minutes and they are ready to eat (season to taste with whatever you like)
+
+
