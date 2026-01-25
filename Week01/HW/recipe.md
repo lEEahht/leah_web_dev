@@ -1,6 +1,6 @@
 # Japanese Sweet Potato Recipe
 
-This recipe is fun and simple. Packed with mnay nutrients you can take your sweet potato as a snack of as a side for you. Japanese sweet potatoes are rich in antioxidants and essential vitamins such as B vitamins, C, and E — potentially providing various health benefits including weight management and mood improvement.
+###This recipe is fun and simple. Packed with mnay nutrients you can take your sweet potato as a snack of as a side for you. Japanese sweet potatoes are rich in antioxidants and essential vitamins such as B vitamins, C, and E — potentially providing various health benefits including weight management and mood improvement.
 ---
 ## Ingedients
 - 3 Japanese Sweet Potatoes
