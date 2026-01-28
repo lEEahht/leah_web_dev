@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form Elements</title>
+</head>
+</html>
+<body>
+    <!-- this is a comment in html anchor tages -->
+    <p id = "top">
+        here is a html form containing basic input types. form elements are used to collect user input.for more infor visit
+         <a href="https://www.w3schools.com/html/html_forms.asp" target="_blank" > w3schools</a>
+    </p>
+    <!--the form tag itself has no visuals but all input elememts wrapped by the form will 
+    be grouped and submitted together but name. we also get default browser behaviors we want -->
+    <!--form actions point to the file or function or resstful API endpoint  to process the form data -->
+    <!--the methos is hwere you assign which HTTPS mehtod
+        GET = usually to retrieve data from the endpoint - form data is in you URL
+        POST = usually to write data to the endpoint - form data is in the request body
+        PUT = usually to edit an existing record
+        DELETE = usually to delete an existing record- usually need a unique identifier passed 
+        to the API endmpoint or DB  to know which one to edit or delete
+        
+    -->
+    <form action=" login.js " 
+    method = "POST" 
+    target = "_self" 
+    name = "userSignup">
+    <!-- this is an old school html only of creating form or input groups-->
+     <fieldset>
+        <!--Label for the form group.fielset is the legend-->
+        <legend> simple text input </legend>
+        <p>
+            the box and title are created by the feild set and legend tags
+        </p>
+        <!--for accesibility , name is for DB, ID for local JS scripts
+        default input type is text -->
+        <label for="firstname">First Name:</label>
+        <input name="firstname" id = "firstname" type="text" />
+        <!-- another text input with new attributes 
+         Name= where to write in the DB, value= what to write
+         place holder= what to show in the input box before the user types 
+         max length= the maximum number of characters allowed in the input field -->
+         <label for ="lastname">Last Name:</label>
+         <input name="lastname" 
+         id="lastname"
+         type="text"
+         placeholder="smith"
+         maxlength="3"
+         
+         />
+         <br/>
+         <label for ="age">Age:</label>
+         <!--type number only allows numbers and mathy symbolds 
+         the presence of a boolean attribute means its true without having to use fals es tametsn-->
+         <input name="age"
+         id="age"
+         type="number"
+         min="0"
+         max="40"
+         required />
+         <br/>
+         <label for="password">password:</label>
+         <input name="password"
+         id="password"
+         type="password"
+         minlength="15"
+         required />
+
+        </fieldset>
+    </fieldset><legend> text area feild </legend>
+    <label for="whyIDM"> why did you apply to IDM</label>
+    <textarea name = "whyIDM" id= "whyIDM" cols="50" rows="10"></textarea>
+    </fieldset>
+
+    </fieldset><legend> check box </legend>
+    <p>
+        check boxes allow the user to select more than one optuon for the same answer once checkbozes in the same group have the sa,e na,e but diff values 
+    </p>
+    <p>what kind of pets o you have?</p>
+    <label><input type="checkbox" name="pets" value="dog" />DOG</label>
+    <label><input type="checkbox" name="pets" value="cat" />CAT</label>
+    <label><input type="checkbox" name="pets" value="bird" />BIRD</label>
+    <label><input type="checkbox" name="pets" value="snake" />SNAKE</label>
+    </p>
+    </fieldset>
+
+    <fieldset><legend> radio buttons </legend>
+    <p>which one is your favorite pet?</p>
+    <label><input type="radio" name="pets" value="dog" />DOG</label>
+    <label><input type="radio" name="pets" value="cat" />CAT</label>
+    <label><input type="radio" name="pets" value="bird" />BIRD</label>
+    <label><input type="radio" name="pets" value="snake" />SNAKE</label>
+    </fieldset>
+    </p>
+    <fieldset><legend> Select option dropdown </legend>
+        <p> using selct and option tags you can add items to a dropdown to select</p>
+        <label for="state"> Pick a state!</label>
+        <select name="state" id="state">
+            <option value="NY">New York</option>
+            <option value="TX">Texas</option>
+            <option value="FL">Florida</option>
+        </select>
+    </fieldset>
+
+        <button role="button"> Sign up! </button>
+    </form>
+    <a href="#top"> back to top</a>
+
+</body>
