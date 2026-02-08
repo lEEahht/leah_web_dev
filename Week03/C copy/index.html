@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <title>Simple Navbar | Inline-Block</title>
+<!--internal style sheet-->
+    <style type="text/CSS">
+      /*reset browser default styles */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family:'Courier New', Courier, monospace;
+      }
+      ul {
+        /*remove all bullet points */
+        list-style-type: none;
+        overflow: hidden;
+        background-color: rgb(183, 215, 128);
+        /*
+        make the parent elements font size 0 when using inline block to get
+         rid of the tiny annoying space between letters (becase inline is usually for text)
+        */
+        /*font-size: 0;*/
+
+      }
+      li {
+        /*
+        display the list items by default. they dont want to share horizontal space with other elements
+        we are making these lis display inline block which allows us to size elements like a block elememmt 
+        but we can also stack elements horizonatally. like an inline element. 
+        */
+        display: inline-block;
+        font-size: 1rem;
+        width: 200px;
+      }
+      /* decendent selector-looks for a pattern of elements on the page
+      this is looking for only the anchor tags inside the list items (li)*/
+      li a {
+        /*make the links inside the list items block elements so they take up the whole area of the parent element*/
+        display: block;
+        text-align: center;
+        /* make it big and chunky like a button */
+        width: 100px;
+        padding: 10px;
+        /*padding-top: 50px;*/
+        /*order matters*/
+        color: rgb(146, 5, 5);
+        text-decoration: none;
+      }
+      /* highlight the active page in the menu*/
+      .active {
+        background-color: blueviolet;
+        /*pseudoclass selector - when hovering over the link change the background color */
+        li a:hover {
+
+        }
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <header> 
+      <nav>
+        <!--should always be an unordered list items -->
+        <ul>
+          <li><a href="#">Link 1</a></li>
+          <li>
+            <a
+              class="active"
+              href="#"
+              >Link 2</a
+            >
+          </li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>
