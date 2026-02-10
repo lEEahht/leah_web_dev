@@ -1,0 +1,45 @@
+/* zero out the default margin and padding for all elements */
+
+html, 
+body {
+    margin: 0;
+   
+}
+div {
+    border:5px solid rgba(215, 231, 147, 0.644);
+    background-color: lightblue;
+
+}
+.abs-no-parent-pos {
+    background-color: cornflowerblue;
+    width: 100px;
+    position: absolute;
+    top: 20%;
+    left: 20px;
+    right: 100px;
+
+}
+.rel-parent-pos {
+    background-color: rgb(234, 128, 240);
+    width: 200px;
+    height: 200px;
+    position: relative;
+    bottom: 10px;
+    right: 0;
+   
+}
+.abs-rel-parent-pos {
+    background-color: rgb(240, 128, 128);
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+}
+header {
+    background-color: rgb(128, 240, 128);
+    width: 60%;
+    height: 100px;
+    position: fixed;
+    z-index: 10;
+}
