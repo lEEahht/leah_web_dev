@@ -41,5 +41,6 @@ header {
     width: 60%;
     height: 100px;
     position: fixed;
+    /*push to the top of the page*/
     z-index: 10;
 }
