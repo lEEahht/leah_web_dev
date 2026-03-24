@@ -1,0 +1,185 @@
+body {
+    margin: 0;
+    font-family: 'Special Elite';
+    background: #DFD6A4;
+}
+
+h1 {
+    text-align: center;
+    color: #321F12;
+    margin-top: 40px;
+}
+
+.welcome {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.card {
+    padding-bottom: 1rem;
+    width: 70%;
+    height: 50%;
+    margin: auto;
+    background: #321F12;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    transition: transform 1s ease, box-shadow 1s ease;
+    flex-direction: row;
+    border-radius: 14px 14px 14px 14px ;
+}
+
+/*this is to lift the whole card woww*/
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+
+
+.tabs {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 0;
+    position: relative;
+}
+
+
+.tabs a{
+    padding: 16px 40px;
+    text-decoration: none;
+    color: #DFD6A4;
+    position: relative;
+    transition: all .50s ease;
+}
+
+
+/* layerd tabs */
+
+/*part of code i figued out how to fix the tabs i
+ didnt realize when i put a class within a 
+anchor tag that i can specifical style the tabs. i also like how i can layer 
+it I learned the left property to slightly adjust the position and then
+ used the z index to layer*/
+.home-tab {
+    background: #321F12;
+    border-radius: 14px 14px 0 0;
+    left: 0px;
+    z-index: 3;
+}
+
+.gal-tab {
+    background: #A15D66;
+    left: -20px;
+    border-radius: 14px 14px 14px 14px;
+    z-index: 2;
+}
+
+.shop-tab {
+    background: #808249;
+    border-radius: 14px 14px 14px 14px;
+    left: -40px;
+    z-index: 1;
+}
+
+
+/* hover lift effect */
+
+.tabs a:hover{
+    top: -12px;
+    transform: scale(1.05);
+    transition: transform .50s ease;
+}
+
+
+/* whats on top of the first file folder */
+
+.content {
+    padding: 1rem;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+      
+}
+.content img {
+    border-radius: 14px;
+    width: 50%;
+    height: 40%;
+    border: 4px solid #808249;
+  
+}
+.text {
+    padding: 1rem;
+    width: 50%;
+    color: #DFD6A4;
+    font-size: 30px;
+}
+/* phone styling */
+
+@media (max-width: 768px) {
+
+h1 {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+/* card becomes wider for small screens */
+
+.card {
+    width: 90%;
+}
+
+/* tabs shrink */
+
+.tabs {
+    flex-wrap: wrap;
+}
+
+.tabs a {
+    padding: 10px 18px;
+    font-size: 20px;
+}
+
+/* reduce overlap so tabs don't go off screen */
+
+.gal-tab {
+    left: -10px;
+}
+
+.shop-tab {
+    left: -20px;
+}
+
+
+/* stack image and text vertically */
+
+.content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* image becomes full width */
+
+.content img {
+    width: 90%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* text becomes readable size */
+
+.text {
+    width: 90%;
+    font-size: 18px;
+}
+
+/* disable hover animation on phones */
+
+.card:hover {
+    transform: none;
+}
+
+.tabs a:hover {
+    transform: none;
+}
+
+}

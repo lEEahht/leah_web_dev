@@ -1,0 +1,121 @@
+/* Global styles */    
+*{
+    box-sizing: border-box;
+
+}
+body{
+    font-family: 'Helvetica', 'sans-serif', 'Arial';
+    margin: 0;
+  
+}
+img{
+    width:100%;
+    height:auto;
+
+}
+/* desktop first styling */
+header {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('../img/grey_wash_wall.png');
+    padding: 0 2rem;
+    position: relative;
+}
+.brand {
+    margin: 0;
+    font-weight: 300;
+}
+header a {
+    color: #AAA;
+    text-decoration: none;
+}
+/* Hide the mobile menu by default  */
+
+.mobile-menu {
+    display: none;
+}
+.menu {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+}
+.menu li {
+    min-width: 5rem;
+
+}
+.menu li a {
+    display: block ;
+    pading: 1rem;
+}
+.menu li a:hover{
+    color: #EEE;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.container {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.thumb{
+    flex: 0 0 23%;
+    margin: 1rem auto;
+}
+/* Media query for smaller screens */
+/*tablet */
+
+/*@media screen and (min-width: 768px)  and (max-width: 1024px) {
+    body{
+        background-color: green;
+    }
+
+}*/
+/* tbalet size  classic ipad max width only */
+@media screen and (max-width: 1024px) {
+     body{
+        background-color: purple;
+    }
+    
+
+}
+/* mobile */
+@media screen and (max-width: 768px) {
+    body{
+        background-color: blue;
+    }
+    .mobile-menu {
+        display: block;
+        color: #AAA;
+        font-size: 2rem;
+        position: absolute;
+        top: .5rem;
+        right: 1rem;
+    }
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+    }
+    .menu {
+        flex-direction: column; /* Hide the menu by default on mobile */
+        
+    }
+    .menu li {
+        border-top: 1px solid rgba(170, 170, 170, 0.5);
+    }
+    .container{
+        flex-direction:column;
+
+    }
+    .thumb{
+        flex: 0 0 100%;
+        margin: 1rem auto;
+    }
+}

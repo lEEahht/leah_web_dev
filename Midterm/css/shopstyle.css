@@ -1,0 +1,243 @@
+/*global styles*/
+
+body {
+    margin: 0;
+    font-family: 'Special Elite';
+    background: #F3EED7;
+}
+
+
+
+header {
+    background: #a6a960;
+    padding-top: 10px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+
+}
+nav ul {
+    list-style: none;
+    padding: .2rem;
+    margin: 0;
+    background: #321F12;
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+nav li {
+
+    margin: 0 20px;
+}
+
+
+.home-tab {
+    background: #321F12;
+    border-radius: 14px 14px 14px 14px;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.3);
+    left: 0px;
+    z-index: 3;
+}
+
+.gal-tab {
+    background: #A15D66;
+    left: -20px;
+    border-radius: 14px 14px 14px 14px;
+    z-index: 2;
+}
+
+.shop-tab {
+    background: #808249;
+    border-radius: 14px 14px 14px 14px;
+    left: -40px;
+    z-index: 1;
+}
+
+
+nav a {
+    color: #F3EED7;
+    text-decoration: none;
+    padding: 12px;
+    display: block;
+}
+
+nav a:hover {
+
+    transform: scale(2);
+    transition: transform .50s ease;
+
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 60px;
+    scroll-snap-type: x mandatory;
+}
+/*styling the scrool bar*/
+
+.gallery::-webkit-scrollbar {
+    height: 10px;
+}
+
+
+
+
+/* card style */
+
+.gallery div {
+    flex: 0 0 350px;
+    padding: 15px;
+    background: #e89fa9;
+    border: 2px solid #321F12;
+    border-radius: 10px;
+    box-shadow: 6px 6px 0px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+    scroll-snap-align: center;
+}
+
+
+/* imag styling */
+
+.gallery img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    border: 2px solid #321F12;
+}
+
+/* the text */
+
+p {
+    text-align: center;
+    color: #321F12;
+    font-size: 14px;
+}
+
+
+/* scattered polaroid effect */
+
+.gallery div.dudes {
+    transform: rotate(-8deg);
+}
+
+.gallery div.banana {
+    transform: rotate(6deg);
+}
+
+.gallery div.emo {
+    transform: rotate(-5deg);
+}
+
+.gallery div.redeyes {
+    transform: rotate(10deg);
+}
+
+.gallery div.sunflow {
+    transform: rotate(-7deg);
+}
+
+.gallery div.face {
+    transform: rotate(8deg);
+}
+
+
+
+.gallery div.watercolor {
+    transform: rotate(-4deg);
+}
+
+
+/* hover */
+
+.gallery div:hover {
+    transform: rotate(0deg) scale(1.08);
+    z-index: 10;
+}
+
+
+/* cursor styles */
+
+.gallery {
+    cursor: grab;
+}
+
+.gallery:active {
+    cursor: grabbing;
+}
+
+
+
+
+/* phone media queary wow! */
+
+@media (max-width: 768px) {
+
+
+h1 {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+/* navigation */
+
+nav ul {
+    flex-direction: row;
+    align-items: center;
+}
+
+nav li {
+    padding: .3rem;
+}
+
+nav a {
+    padding: 8px;
+    font-size: 20px;
+}
+nav a:hover {
+    transform: none;
+}
+
+/* gallery container */
+
+.gallery {
+    padding: 35px;
+    gap: 20px;
+}
+
+
+/* smaller art cards */
+
+.gallery div {
+    flex: 0 0 240px;
+    padding: 10px;
+}
+
+
+/* smaller images */
+
+.gallery img {
+    border-radius: 8px;
+}
+
+/* text adjustments */
+
+p {
+    font-size: 13px;
+}
+
+
+
+/* disable hover zoom on phones */
+
+.gallery div:hover {
+    transform: none;
+}
+
+}

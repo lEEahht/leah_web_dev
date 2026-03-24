@@ -1,0 +1,108 @@
+/*global styles*/
+/* take into account border san padding in our set dimensitons of any box*/
+*{
+    box-sizing:border-box;
+}
+/* remove default margin and padding*/
+body{
+    margin:0;
+}
+img{
+    width: 100%;
+    height: auto;
+
+}
+
+/* desktop first styling */
+/*jumbotron*/
+
+div.hero{
+    width:100vw;
+    height:100vh;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+.hero article{
+    position:absolute;
+    bottom:15%;
+    right:0;
+    width:50%;
+    padding: 2rem;
+    background-color: linear-gradient(to right, rgba(170, 21, 21, 0.75) 0% rgb(255, 160, 160));
+
+}
+button,
+a.info{
+    padding:.75rem 2 rem;
+    border: 2px solid black;
+    background-color: transparent;
+    border-radius: .75rem;
+    color:rgb(3, 1, 1);
+    text-transform: uppercase;
+    text-decoration: none;
+    /* transistion get deined here at the starting state of the element*/
+    transition:all 1s ease;
+    min-width: 10rem;
+}
+button:hover,
+a.info:hover{
+    background-color: rgb(13, 173, 188);
+    color: rgb(38, 18, 18);
+}
+
+/*gallery*/
+.container {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.thumb{
+    position:relative;
+    flex:0 0 30%;
+    /*flex grow shrink and basis*/
+    /*flex-grow:0 means the item will not grow to fill the container
+    flex-grow:1 means grow to fill the space completly at the same rate as all of the other elements
+    flex-grow:2 means grow to fill the space completly at the 2x as all of the other elements
+    flex-basis - think of this as anohter way to define width;
+    */
+    overflow:hidden;
+    margin:1.5rem auto;
+}
+/*prepare our img tranasform inital state*/
+.thumb img{
+    transform:scale(1);
+    transform:rotate(0deg);
+    transition:all 1s ease;
+}
+.thumb:hover img{
+    transform: scale(1.5) rotate(-20deg);
+
+
+}
+.mask{
+   top:0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background-color: rgba(225, 255, 100, 0.75);
+   display:flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   transition: all 1s ease;
+
+
+
+}
+.mask h2 {
+    margin:0;
+
+}
+.mask p{
+    font-style: italic;
+    
+}
