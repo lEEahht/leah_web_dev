@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS Objects Lesson</title>
+  </head>
+  <body>
+    <h1>Open the Console to see your output!</h1>
+
+    <script>
+      // Your JavaScript goes here
+      const person = {
+        name: "Leah",
+        age: 20,
+        isStudent: true
+      };
+        console.log(person);
+
+        const movie={
+            title: "Inception", 
+            year: 2010,
+            director: "Christopher Nolan",
+        };
+        console.log(movie.title);
+        console.log(movie["director"]);
+        let feild="year";
+        console.log(movie[feild]);
+
+        const car = {
+  make: "Toyota",
+  model: "Camry",
+  year: 2009,
+};
+
+car.year = 2009;
+car.color = "grey";
+delete car.model;
+console.log(car);
+
+const dog = {
+  name: "Biscuit",
+  breed: "Beagle",
+  bark() {
+    console.log(this.name + " says: Woof!");
+  },
+};
+dog.bark();
+dog.describe = function () {
+  console.log(this.name + " is a " + this.breed);
+};
+dog.describe();
+     
+const laptop = {
+  brand: "Apple",
+  model: "MacBook Pro",
+  ram: 32,
+  storage: 1,
+};
+console.log(Object.keys(laptop));
+console.log(Object.values(laptop));
+console.log(Object.entries(laptop));
+
+//THE EXERCISE
+// book object 
+const book={
+    title: "The After Dark",
+    author: "Haruki Murakami",
+    pages: 224,
+    genre: "Fiction",
+    isAvailable: false,
+}
+console.log(book.title);
+console.log(book["author"]);
+
+//method
+book.describe = function() {
+    console.log(`${this.title} by ${this.author} — ${this.pages} pages`);
+}
+
+book.describe();
+
+console.log(Object.keys(book));
+
+    </script>
+  </body>
+</html>
