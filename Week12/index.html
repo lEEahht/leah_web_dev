@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Location Map</title>
+
+    <!-- Leaflet CSS — styles the map -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        margin-bottom: 4px;
+      }
+
+      .subtitle {
+        color: #6b7280;
+        margin-bottom: 20px;
+      }
+
+      #status {
+        margin: 16px 0;
+        font-size: 18px;
+        color: #374151;
+        padding: 12px;
+        background-color: #f3f4f6;
+        border-radius: 8px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      #map {
+        height: 450px;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        border-radius: 8px;
+        border: 2px solid #d1d5db;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Location on a Map</h1>
+    <p class="subtitle">Geolocation API + Leaflet</p>
+    <div id="status">Finding your location...</div>
+    <div id="map"></div>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script>
+      // https://tile.openstreetmap.org/{z}/{x}/{y}.png
+      //declare globally so we can access on success
+
+      let status;
+
+      document.addEventListener('DOMContentLoaded', ()=> {
+        status = document.getElementById('status')
+        //check and see if the browser supports geolocation
+        if(!("geolocation" in navigator)){
+          status.textContent= 'Geolocation is not supported in your browser. '
+
+        } else{
+          navigator.geolocation.getCurrentPosition(showOnMap, handleError)
+        }
+      })
+    const showOnMap=(position)=> {
+        const{latitude, longitude, accuracy} = position.coords
+        //update the status div with out stats
+        status.innerHTML=`
+        <strong>latitude:</strong> ${latitude}<br/>
+        <strong>longitude:</strong> ${longitude}<br/>
+        <strong>accuracy:</strong> ${accuracy}
+        `
+        const map=L.map('map').setView([latitude,longitude],16)
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors',
+        }).addTo(map)
+
+        L.circle([latitude, longitude],{
+            radius:accuracy,
+            color: '#3b2f6',
+            fillColor: '#3b2f6',
+            fillOpacity: 0.2,
+        }).addTo(map)
+
+        L.marker([latitude, longitude]).addTo(map).bindPopup(`
+        <strong> Your Are Here!</strong> <br/>
+        Lat: ${latitude.toFixed(5)}<br/>
+        Lon: ${longitude.toFixed(5)}<br/>
+        Accuracy: ${accuracy}
+        `)
+    
+
+    }
+    const handleError=(error)=> {
+      status.textContent = 'Error: ' + error.message
+    }
+  
+
+
+    </script>
+  </body>
+</html>
