@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work Experience</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="../About/about.html">About Me</a>
+    <a href="./exp.html">Experiences</a>
+    <a href="../Surprise/surprise.html">Surprise</a>
+  </nav>
+
+  <!-- MAIN PAGE -->
+  <div class="page" id="page">
+
+    <!-- HERO BIG TEXT -->
+    <div class="hero-text" aria-hidden="true">
+      <div class="hero-line">WORK</div>
+      <div class="hero-line">EXPERIENCE</div>
+    </div>
+
+    <!-- LOGO LOOP (static, sits under hero text) -->
+    <div class="logo-loop-wrapper">
+      <div class="logo-track">
+        <span class="logo-item">PYTHON</span>
+        <span class="logo-dot">●</span>
+        <span class="logo-item">CSS</span>
+        <span class="logo-dot">●</span>
+        <span class="logo-item">HTML</span>
+        <span class="logo-dot">●</span>
+        <span class="logo-item">JAVASCRIPT</span>
+        <span class="logo-dot">●</span>
+        <span class="logo-item">C</span>
+        <span class="logo-dot">●</span>
+        <span class="logo-item">VERILOG</span>
+        <span class="logo-dot">●</span>
+        <span class="logo-item">ARDUINO</span>
+        <span class="logo-dot">●</span>
+        <span class="logo-item">RASBERRY PI</span>
+        <span class="logo-dot">●</span>
+        <span class="logo-item">REAPER</span>
+        <span class="logo-dot">●</span>
+        <span class="logo-item">MIXING AND MASTERING</span>
+        <span class="logo-dot">●</span>
+        <span class="logo-item">MICROSOFT SUITE</span>
+        <span class="logo-dot">●</span>
+      </div>
+    </div>
+
+
+    <div class="scroll-hint" id="scrollHint">
+      <span class="scroll-hint-text">scroll</span>
+      <svg class="scroll-arrow" viewBox="0 0 40 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="7" x2="33" y2="7" stroke="currentColor" stroke-width="1.5"/>
+        <polyline points="27,1 38,7 27,13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="timeline-container" id="timelineContainer">
+
+      <div class="timeline-line" id="timelineLine"></div>
+
+      <!-- Experience 1 -->
+      <div class="experience-card" id="exp1" data-threshold="0.15">
+        <div class="exp-dot"></div>
+        <div class="exp-connector"></div>
+        <div class="exp-content">
+          <p class="exp-date">2022 – Present</p>
+          <h2 class="exp-title">RESEARCHER<br/>NYU ABILITY PROJECT</h2>
+          <ul class="exp-list">
+            <li>Researched XR solutions to improve blind and deaf users' navigation of New York City</li>
+            <li>Designed assistive XR interfaces using Unity and Arduino-controlled sensors; applied Python for prototyping
+adaptive interactions; collaborated on accessible input mapping in VR environments</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Experience 2 -->
+      <div class="experience-card" id="exp2" data-threshold="0.45">
+        <div class="exp-dot"></div>
+        <div class="exp-connector"></div>
+        <div class="exp-content">
+          <p class="exp-date">2020 – 2022</p>
+          <h2 class="exp-title">Admissions<br/>Ambassador</h2>
+          <ul class="exp-list">
+            <li>Conducted campus tours for prospective students and families, addressing inquiries about the college process.</li>
+            <li>Assisted visitors during admissions events, helping families navigate campus resources.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Experience 3 -->
+      <div class="experience-card" id="exp3" data-threshold="0.72">
+        <div class="exp-dot"></div>
+        <div class="exp-connector"></div>
+        <div class="exp-content">
+          <p class="exp-date">2018 – 2020</p>
+          <h2 class="exp-title">RESOURCE CENTER<br/>OFFICE ASSISENT</h2>
+          <ul class="exp-list">
+            <li>Supported senior photographers on commercial shoots.</li>
+            <li>Learned post-production workflows and file management.</li>
+            <li>Built foundational skills in composition and exposure.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

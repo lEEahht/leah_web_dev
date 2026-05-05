@@ -1,0 +1,242 @@
+:root {
+  --navy:  #0d2a4a;
+  --cream: #fffded;
+  --supadark: #04172c;
+  --navy-dim: rgba(18, 62, 107, 0.5);
+}
+
+*, *::before, *::after {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  color: var(--supadark);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 48px;
+  background: var(--supadark);
+}
+
+nav a {
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  opacity: 0.65;
+  transition: opacity 0.2s;
+}
+nav a:hover { opacity: 1; }
+nav a.nav-active { opacity: 1; }
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background-color: #04172c;
+  background-image: radial-gradient(ellipse at 70% 50%, var(--navy) 0%, transparent 60%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  padding-top: 64px;
+  padding-left: 0px;
+}
+
+.grid-line {
+  position: absolute;
+  background: rgba(255, 253, 237, 0.12);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.gl-v1 { top: 0; bottom: 0; left: 50%; width: 1px; }
+.gl-v2 { top: 0; bottom: 0; left: 7%; width: 1px; }
+.gl-h1 { left: 0; right: 0; top: 64px; height: 1px; }
+.gl-h2 { left: 0; right: 50%; bottom: 8%; height: 1px; }
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 40px 60px 48px;
+  left: 100px;
+}
+
+.hero-name-sm {
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(30px, 8vw, 60px);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--cream);
+  margin-bottom: 8px;
+  opacity: 0;
+  animation: fadeUp 0.6s 0.2s ease forwards;
+}
+
+.hero-big {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(90px, 14vw, 175px);
+  line-height: 0.9;
+  color: var(--cream);
+  letter-spacing: 0.01em;
+  overflow: hidden;
+}
+
+.split-char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(70px);
+}
+
+.hero-photo {
+  position: relative;
+  z-index: 2;
+  width: 500px;
+  height: 635px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: var(--navy);
+  left: 130px;
+  border-radius: 20px;
+  align-self: center;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.content-section {
+  background: var(--cream);
+  padding: 20px;
+  position: relative;
+}
+
+.section-big-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 180px;
+  color: var(--navy);
+  line-height: 0.9;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.section-body {
+  display: flex;
+  flex-direction: row;
+}
+
+.scroll-float-text {
+   display: inline-block;
+   }
+
+.char {
+  display: inline-block;
+  will-change: opacity, transform;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-top-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.cyber-photo img {
+  width: 400px;
+  height: auto;
+  margin-top: 8px;
+}
+
+.about-section .text-col {
+  max-width: 620px;
+}
+
+.text-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.text-col p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--navy);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media screen and (max-width: 768px) {
+  nav { padding: 16px 24px; }
+
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    padding-top: 52px;
+  }
+
+  .hero-text {
+    order: 1;
+    left: 0;
+    width: 100%;
+    padding: 32px 20px 24px;
+    justify-content: flex-start;
+  }
+
+  .hero-name-sm { font-size: 22px; }
+  .hero-big { font-size: 72px; }
+
+  .hero-photo {
+   
+    order: 2;
+    width: 450px;
+    height: 500px;
+    border-radius: 0;
+    align-self: auto;
+    margin-left: -110px;
+
+
+  }
+
+  .grid-line { display: none; }
+
+  .content-section { padding: 48px 20px 64px; }
+
+  .section-big-title {
+    font-size: 58px;
+    margin-bottom: 16px;
+  }
+
+  .about-top-row { flex-direction: column; }
+  .cyber-photo img { width: 100px; }
+
+  .section-body { flex-direction: column; }
+}

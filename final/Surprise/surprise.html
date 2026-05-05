@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="../About/about.html">About Me</a>
+    <a href="../Experiences/exp.html">Experiences</a>
+    <a href="./surprise.html" class="nav-active">Surprise</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1 id="heroTitle">AUDIO PROJECTS</h1>
+
+    <div class="hero-content">
+      <div>
+        <p class="label">Sound art</p>
+        <h2>TERRA TO TECH</h2>
+        <p class="description">
+          A sound art piece about the relationship between nature and technology.
+        </p>
+      </div>
+    </div>
+
+    <video id="heroVideo" muted loop>
+      <source src="soun_art_visuals.mp4" type="video/mp4">
+    </video>
+
+  </section>
+
+  <!-- FILM SECTION -->
+  <section class="film fade-in">
+    <div class="film-container">
+      <video id="filmVideo">
+        <source src="Final_proj.mp4" type="video/mp4">
+      </video>
+
+      <div class="film-text">
+        <p class="label">Sound Design</p>
+        <h1>ANIMATED SHORT FILM</h1>
+        <p>
+          For this project I muted the original audio and recreated sound for the video using foley and background music.
+          Some notable sounds were the clinking sound of the can. I used a pot from my kitchen and time manipulation to
+          speed it up and make it high pitched to match the speed of the rock. My favorite part was the little voice on the character.
+          I took a clip of a child's voice and sped it up to make it sound like the character is talking to himself.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MUSIC SECTION -->
+  <section class="music fade-in">
+    <p class="label">Music</p>
+    <h1>ESCAPE</h1>
+
+    <div class="player">
+      <button id="playBtn">▶</button>
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+    </div>
+
+    <audio id="audio">
+      <source src="real_music_proj.wav" type="audio/wav">
+    </audio>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
